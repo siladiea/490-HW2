@@ -50,7 +50,7 @@ class SarcasmDataset(Dataset):
 
         input_ids = encoding["input_ids"].squeeze(0)
         attention_mask = encoding["attention_mask"].squeeze(0)
-        label_tensor = torch.tensor([label], dtype=torch.long)
+        label_tensor = torch.tensor(label, dtype=torch.long)
 
         return {"input_ids": input_ids,"attention_mask": attention_mask, "label": label_tensor}
 
